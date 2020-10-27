@@ -16,7 +16,7 @@ const Welcome: React.FC<IWelcome> = ({text = 'WELCOME'}) => {
   return (
     <View>
       <Text>{text}</Text>
-      <Text>{status}</Text>
+      <Text>{status ? 'true' : 'false'}</Text>
       <Foo />
     </View>
   );
