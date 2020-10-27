@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,6 +18,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import SplashScreen from 'react-native-splash-screen';
+
 import {
   Header,
   LearnMoreLinks,
@@ -25,18 +27,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Welcome, {SumaDosValores} from 'screens/welcome';
-import Foo from 'components/Foo';
-import {IconA} from 'components/icons';
 
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  const x: number = SumaDosValores(1, 2);
-  console.log(x);
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
@@ -55,7 +55,6 @@ const App = () => {
                 this screen and then come back to see your edits.
               </Text>
             </View>
-            <IconA />
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
@@ -74,8 +73,6 @@ const App = () => {
                 Read the docs to discover what to do next:
               </Text>
             </View>
-            <Foo />
-            <Welcome />
             <LearnMoreLinks />
           </View>
         </ScrollView>
