@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Provider } from 'react-redux';
 import { store } from 'store';
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
 import { Layout } from 'theme';
-
+import SplashScreen from 'react-native-splash-screen';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 
 declare const global: { HermesInternal: null | {} };
 
 const App = () => {
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <Provider store={store}>
       <StatusBar barStyle="light-content" />

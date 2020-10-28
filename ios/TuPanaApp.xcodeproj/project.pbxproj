@@ -194,7 +194,6 @@
 				5CF96CBF1FD2E8AC216DDA41 /* Pods-TuPanaApp-tvOSTests.debug.xcconfig */,
 				FEE02EF8F439E79E1B9E9BFD /* Pods-TuPanaApp-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
