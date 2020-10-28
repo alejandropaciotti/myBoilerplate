@@ -48,7 +48,6 @@
       "jsx",
       "json",
       "node"
-    ],
-    "transformIgnorePatterns": "/node_modules/react-native-flipper"
+    ]
   }
 }
